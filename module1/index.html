@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>page title</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="header">Header</h1>
+    </header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Article heading</h2>
+        <p style="color: lightskyblue">Paragraph...</p>
+        <a href="https://www.google.com/">More information...</a>
+      </article>
+      <!-- <button onclick="changeColor()">Click me!</button> -->
+      <section>
+        <ul>
+          <li><a href="#">Cool Picture</a></li>
+          <img
+            src="https://i.pinimg.com/236x/06/52/a3/0652a31ea2cb219526e2ac4d799bf9d5.jpg"
+            alt="Meme Me!"
+            width="100"
+            height="100"
+          />
+          <form onsubmit="handleSubmitOrder()">
+            <div>
+              <label for="order">Order Item:</label><br />
+              <input type="text" id="order" name="order" value="Snackbar" />
+            </div>
+            <!-- <input type="submit" value="Order Now" /> -->
+            <button onclick="orderItem()">Click Order Now!</button>
+          </form>
+        </ul>
+      </section>
+      <aside id="aside">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">Article 1</a></li>
+          <li><a href="#">Article 2</a></li>
+        </ul>
+      </aside>
+    </section>
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+  </body>
+  <script>
+    function orderItem() {
+      alert("Hello, Your Item has been shipped!");
+    }
+    function handleSubmitOrder() {
+      console.log("Order submitted!");
+    }
+    function changeColor() {
+      document.getElementById("header").innerHTML = "Surprise Me!";
+      document.getElementById("aside").style.backgroundColor = "green";
+      document.body.style.backgroundColor = "lightred";
+      alert("Hello, world! This is my Javascript website!");
+    }
+  </script>
+</html>
