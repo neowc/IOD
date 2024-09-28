@@ -20,8 +20,23 @@
       <article>
         <h2>Article heading</h2>
         <p style="color: lightskyblue">Paragraph...</p>
+        <p>
+          {text-transform: capitalize;}
+          <strong
+            ><span
+              >lorem ipsum dolor sit amet, trrthrynry adipisicing elit…</span
+            ></strong
+          >
+        </p>
+        <p { font-weight: bold; }> Quizz </p>
         <a href="https://www.google.com/">More information...</a>
+        <a href="https://www.google.com/"> No underline </a>
       </article>
+      <div>
+        <p>This paragraph is selected by `div > p`.</p>
+        <span>This span element is in between the `div` and `p` elements.</span>
+        <p>This paragraph is selected by `div + p` and `div ~ p`.</p>
+      </div>
       <!-- <button onclick="changeColor()">Click me!</button> -->
       <section>
         <ul>
@@ -57,9 +72,13 @@
   <script>
     function orderItem() {
       alert("Hello, Your Item has been shipped!");
+      w2 = window.open("http://www.w3schools.com");
+      // document.getElementById("header").innerHTML = "Surprise Me!";
     }
     function handleSubmitOrder() {
+      alert("Hello There! Your order has been submitted!");
       console.log("Order submitted!");
+      document.getElementById("header").innerHTML = "Surprise Me!";
     }
     function changeColor() {
       document.getElementById("header").innerHTML = "Surprise Me!";

@@ -1,0 +1,39 @@
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1 Exercise 3</title>
+    <link rel="stylesheet" href="exercise3.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Web_2.0_Map.svg/1280px-Web_2.0_Map.svg.png"
+                width="300" height="300" />
+            <h1 id="heading1">Hello</h1>
+            <button style="color: red" onclick="change1()">Change Me!</button>
+        </div>
+        <div class="column" id="column2">
+            <img src="https://i.pinimg.com/236x/06/52/a3/0652a31ea2cb219526e2ac4d799bf9d5.jpg" width="300"
+                height="300" />
+            <h1 id="heading2">World</h1>
+            <button style="color: blue" onclick="change2()">Change Me!</button>
+        </div>
+    </div>
+</body>
+<script>
+    function change1() {
+        document.getElementById("column1").style.backgroundColor = "lightblue";
+        document.getElementById("heading1").innerHTML = "Surprise!";
+    }
+    function change2() {
+        document.getElementById("column2").style.backgroundColor = "lightgreen";
+        document.getElementById("heading2").innerHTML = "Halos!";
+    }
+</script>
+
+</html>
