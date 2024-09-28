@@ -1,0 +1,98 @@
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dice Game</title>
+    <link rel="stylesheet" href="mystyle.css"/>
+</head>
+
+<body>
+    <h1>Dice Game!</h1>
+    <div class="column">
+        <label style="color: orangered" for="diceface">Choose a Dice:</label>
+        <select name="dice-option" id="dice-option">
+            <option value="d6">D6</option>
+            <option value="d7">D7</option>
+        </select>
+    </div>
+    <div class="container">
+        <div class="column" id="column1">
+            <div class="dice">
+                <p class="Player1">Player 1</p>
+                <img class="img1" src="dice1.png">
+            </div>
+            <button style="color: blue" onclick="rollDice1()">Roll Me!</button>
+        </div>
+        <div class="column" id="column2">
+            <div class="dice">
+                <p class="Player2">Player 2</p>
+                <img class="img2" src="dice4.png">
+            </div>
+            <button style="color: blue" onclick="rollDice2()">Roll Me!</button>
+        </div>
+    </div>
+    <div class="bottom">
+        <button type="button" class="butn" onClick="rollTheDice()">
+            Roll Dice
+        </button>
+    </div>
+    <div class="bottom">
+        <button type="button" class="butn" onClick="editNames()">
+            Add Players
+        </button>
+    </div>
+</body>
+<script src="index.js">
+    function change1() {
+        document.getElementById("column1").style.backgroundColor = "lightblue";
+    }
+    function change2() {
+        document.getElementById("column2").style.backgroundColor = "lightgreen";
+    }
+</script>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Let's Play</h1>
+
+        <div class="dice">
+            <p class="Player1">Player 1</p>
+            <img class="img1" src="dice6.png">
+        </div>
+
+        <div class="dice">
+            <p class="Player2">Player 2</p>
+            <img class="img2" src="dice6.png">
+        </div>
+    </div>
+
+    <div class="container bottom">
+        <button type="button" class="butn"
+            onClick="rollTheDice()">
+            Roll the Dice
+        </button>
+    </div>
+    <div class="container bottom">
+        <button type="button" class="butn" 
+            onClick="editNames()">
+            Edit Names
+        </button>
+    </div>
+</body>
+
+</html> -->
