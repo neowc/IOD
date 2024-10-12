@@ -35,6 +35,26 @@ article {
     padding: 1em 2.5%; /* 2-value syntax: top/bottom, left/right */
     margin: 25px; /* 1-value syntax: all sides */
     background-color: lightblue;
+
+    height: 120px !important;
+    border: 2px solid yellowgreen;
+    /* border: 3px dashed red; */
+    /* border: 4px dotted blue; */
+    /* border: 10px solid; */
+
+    overflow: hidden;
+    outline: 10px solid black;
+    border-radius: 10px; /* different values of 10px, 1em or 50% */
+    border-radius: 1em; /* different values of 10px, 1em or 50% */
+    border-radius: 50%; /* different values of 10px, 1em or 50% */
+    width: 800px;
+    height: 800px;
+    padding: 30px;
+    background-image: url('../assets/images/img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: lightsalmon;
 }
 .dimension-units {
     width: 100px;
@@ -42,17 +62,6 @@ article {
     max-width: 50vw;
     max-height: 50vh;
 }
-.box {
-    height: 120px !important;
-}
-.box {
-    border: 2px solid yellowgreen;
-    /* border: 3px dashed red; */
-    /* border: 4px dotted blue; */
-}
-/* .box {
-    border: 10px solid;
-} */
 
 /* Test the two different values of box-sizing */
 .box-content-box {
@@ -74,9 +83,6 @@ article {
     overflow: visible;
     background-color: lightgrey;
 }
-.box {
-    overflow: hidden;
-}
 
 /* Test other overflow values */
 .box-overflow-visible {
@@ -90,26 +96,6 @@ article {
 .box-overflow-auto {
     overflow: auto;
 }
-.box {
-    outline: 10px solid black;
-}
-.box {
-    border-radius: 10px; /* different values of 10px, 1em or 50% */
-    border-radius: 1em; /* different values of 10px, 1em or 50% */
-    border-radius: 50%; /* different values of 10px, 1em or 50% */
-    width: 800px;
-    height: 800px;
-}
-.box {
-    padding: 30px;
-}
-.box {
-    background-image: url('../assets/images/img1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: lightsalmon;
-}
 
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
@@ -119,16 +105,12 @@ article {
 .position-absolute {
     /* top: 0; */
     bottom: 10;
-}
-.position-absolute {
     background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red background */
+    left: 10px;
 }
 .position-relative {
     position: relative;
     background-color: lightblue;
-}
-.position-absolute {
-    left: 10px;
 }
 .position-sticky {
     position: sticky;
@@ -190,4 +172,12 @@ a:visited {
     width: 100vw;
     background-color: lightyellow;
     width: calc(100vw - 100px);
+}
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+}
+.fluid-col {
+    display: inline-block;
+    width: calc(100% - 350px);
 }
