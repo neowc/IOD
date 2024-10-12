@@ -41,90 +41,91 @@ a {
 }
 
 /* Add your answers here, do not modify the above CSS */
+a {
+    color: black!important;
+}
 .mt-20 {
     margin-top: 20px;
 }
 .flex-container {
+    display: inline-flex; /* try out */
     display: flex;
-    /* display: inline-flex; */
+    flex-direction: column; /* try out */
+    flex-direction: column-reverse; /* try out */
+    flex-direction: row-reverse; /* try out */
     flex-direction: row;
-    /* flex-direction: row-reverse; */
-    /* flex-direction: column; */
-    /* flex-direction: column-reverse; */
 }
 .flex-item-1 {
     flex: 1;
 }
-
 .flex-item-2 {
     flex: 2;
 }
-
 .flex-item-3 {
     flex: 3;
 }
-
 .flex-item-4 {
     flex: 4;
 }
 .flex-center {
+    justify-content: space-around; /* try out */
+    justify-content: space-between; /* try out */
     justify-content: center;
-    /* justify-content: space-around; */
-    /* justify-content: space-between; */
+    align-items: start; /* try out */
+    align-items: end; /* try out */
+    align-items: stretch; /* try out */
     align-items: center;
-    /* align-items: start; */
-    /* align-items: end; */
-    /* align-items: stretch; */
 }
 .flex-space-between {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center; /* try out */
+    justify-content: space-between; /* try out */
     justify-content: space-around;
-    /* justify-content: space-between; */
 }
-
 .flex-basis-item-50 {
-    /* flex-basis: 50%; */
+    flex-basis: 50%; /* try out */
     flex-basis: 25%;
 }
-
 .flex-wrap {
+    flex-wrap: wrap-reverse; /* try out */
     flex-wrap: wrap;
-    /* flex-wrap: wrap-reverse; */
 }
-
 .flex-menu {
     display: flex;
     list-style: none;
-    padding: 0;
-    margin: 1-px;
+    padding-left: 2px;
+    padding-right: 25%;
     border: 20px;
     background-color: #68B0AB;
+    flex-direction: row;
+    justify-content: space-between; /* try out */
+    justify-content: flex-end; /* try out */
+    justify-content: center; /* try out */
     justify-content: flex-start;
-    /* justify-content: flex-end; */
-    /* justify-content: center; */
 }
 
+.first-item, .second-item, .third-item, .fourth-item, .fifth-item {
+    width: 10px;
+    border: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 10%;
+    height: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    justify-content: start;
+}
 .flex-menu li {
     padding: 14px 10px;
-}
-
-.flex-menu li a {
-    color: white;
+    flex-grow: 1;
     text-align: center;
-    text-decoration: none;
-    display: block;
 }
-
 .flex-menu li a:hover {
     background-color: green;
 }
-
 .flex-menu li:nth-child(4) {
     order: 5;
-}
-.flex-menu li {
-    flex-grow: 1;
-    text-align: center;
 }
 
