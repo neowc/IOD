@@ -12,12 +12,57 @@
 <body>
   <header>
     <nav>
-      <!-- works like <a href="/index.html">Home</a> -->
-      <a href="/">Home</a>
+      <a href="http://127.0.0.1:5500/module1/Lab/lab-1-html/src/index.html">Home</a>
     </nav>
   </header>
 
   <main>
+    <form method="POST" action="http://127.0.0.1:5500/module1/Lab/lab-1-html/src/form.html">
+      <div>
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name"><br><br>
+      </div>
+      <div>
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name"><br><br>
+      </div>
+
+      <div>
+        <p>Select your favourite coding language:</p>
+        <input type="radio" id="language-html" name="coding-language" value="HTML">
+        <label for="language-html">HTML</label><br>
+        <input type="radio" id="language-css" name="coding-language" value="CSS">
+        <label for="language-css">CSS</label><br>
+        <input type="radio" id="language-js" name="coding-language" value="JavaScript">
+        <label for="language-js">JavaScript</label>
+      </div>
+
+      <div>
+        <p>Select the types of vehicle you own:</p>
+        <input type="checkbox" id="vehicle-car" name="vehicle" value="Car">
+        <label for="vehicle-car">Car</label><br>
+        <input type="checkbox" id="vehicle-bike" name="vehicle" value="Bike">
+        <label for="vehicle-bike">Bike</label><br>
+        <input type="checkbox" id="vehicle-boat" name="vehicle" value="Boat">
+        <label for="vehicle-boat">Boat</label>
+      </div>
+
+      <div>
+        <label for="car-brand">Choose your car brand:</label>
+        <select id="car-brand" name="car-brand">
+          <option value="toyota">Toyota</option>
+          <option value="honda">Honda</option>
+          <option value="ford">Ford</option>
+          <option value="bmw">BMW</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+
+      <div>
+        <button type="submit">Submit form</button>
+      </div>
+    </form>
+
   </main>
 
   <footer>Copyright &copy; 2024</footer>
