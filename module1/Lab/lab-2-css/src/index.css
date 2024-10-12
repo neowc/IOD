@@ -1,0 +1,167 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+.class {
+    margin: 20px;
+    margin: 10px;
+    margin: 30px;
+}
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+}
+.style-me1 {
+    color: red;
+}
+#style-me2 {
+    color: blue;
+}
+.style-me1#style-me2 {
+    color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+.my-descendants-are-styled p {
+    background: red;
+}
+.my-children-are-styled > p {
+    background: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+    margin: 2em 5% 1em 10%;; /* 4-value syntax: top, right, bottom, left */
+    padding: 1em 2.5%; /* 2-value syntax: top/bottom, left/right */
+    margin: 25px; /* 1-value syntax: all sides */
+    background-color: lightblue;
+}
+.dimension-units {
+    width: 100px;
+    height: 10rem;
+    max-width: 50vw;
+    max-height: 50vh;
+}
+.box {
+    height: 120px !important;
+}
+.box {
+    border: 2px solid yellowgreen;
+    /* border: 3px dashed red; */
+    /* border: 4px dotted blue; */
+}
+/* .box {
+    border: 10px solid;
+} */
+
+/* Test the two different values of box-sizing */
+.box-content-box {
+    box-sizing: content-box;
+    width: 400px;
+    height: 400px;
+    background-color: lightcoral;
+}
+
+.box-border-box {
+    box-sizing: border-box;
+    width: 400px;
+    height: 400px;
+    background-color: lightsalmon;
+}
+.overflow-box {
+    width: 100px;
+    height: 50px;
+    overflow: visible;
+    background-color: lightgrey;
+}
+.box {
+    overflow: hidden;
+}
+
+/* Test other overflow values */
+.box-overflow-visible {
+    overflow: visible;
+}
+
+.box-overflow-scroll {
+    overflow: scroll;
+}
+
+.box-overflow-auto {
+    overflow: auto;
+}
+.box {
+    outline: 10px solid black;
+}
+.box {
+    border-radius: 10px; /* different values of 10px, 1em or 50% */
+    border-radius: 1em; /* different values of 10px, 1em or 50% */
+    border-radius: 50%; /* different values of 10px, 1em or 50% */
+    width: 800px;
+    height: 800px;
+}
+.box {
+    padding: 30px;
+}
+.box {
+    background-image: url('../assets/images/img1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: lightsalmon;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+.position-absolute {
+    position: absolute;
+}
+.position-absolute {
+    /* top: 0; */
+    bottom: 10;
+}
+.position-absolute {
+    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red background */
+}
+.position-relative {
+    position: relative;
+    background-color: lightblue;
+}
+.position-absolute {
+    left: 10px;
+}
+.position-sticky {
+    position: sticky;
+    top: 0;
+    background-color: limegreen;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+.text-style {
+    color: orchid; /* Set the font color to a dark gray */
+    font-size: 16px; /* Example with pixels */
+    font-size: 1.5em; /* Example with em units */
+    font-size: 3rem; /* Example with rem units */
+    font-size: 200%; /* Example with percentage */
+    line-height: 1.5; /* Unitless value */
+    line-height: 24px; /* Pixels */
+    line-height: 2em; /* em units */
+    line-height: 150%; /* Percentage */
+    font-weight: bold; /* Keyword value */
+    font-weight: 600;  /* Number value Dancing Script*/
+}
+
+.dancing-script-neo {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
