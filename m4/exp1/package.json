@@ -1,0 +1,22 @@
+{
+  "name": "exp1",
+  "version": "1.0.0",
+  "main": "index2.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index2.js",
+    "dev": "nodemon index2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "exp1": "file:",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.0.0"
+  }
+}
