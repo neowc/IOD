@@ -1,0 +1,31 @@
+<!-- Create a Simple Animation: Design a CSS animation for a square element that moves horizontally from the left to the right side of the screen over 5 seconds. Have the animation loop infinitely.
+Key concepts: @keyframes, animation-duration, animation-iteration-count -->
+
+<!DOCTYPE html>
+<html>  </html>
+<head>
+  <style>
+    .square {
+      width: 40px;
+      height: 40px;
+      background-color: #69f;
+      position: relative;
+      animation-name: move;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes move {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="square"></div>
+</body>
+</html>

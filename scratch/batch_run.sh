@@ -15,10 +15,22 @@ count=0
 
 # filelist=$(find "$source_dir/" -name "*.xlsx")
 # echo "filelist: $filelist"
+#echo $(find -L "$source_dir/" -type f -name "*.xlsx" -exec ls -tr {} + | sed 's|.*/||' )
+#echo $(find -L "$source_dir/" -type f -name "*.xlsx" -exec ls -tr -d -l {} + )
+#echo $(find -L "$source_dir/" -type f -name "*.xlsx" -exec ls -tr {} + )
+
+# for file in $(find -L "$source_dir/" -type f -name "*.xlsx" -exec ls -tr {} + ); do
+#     ((count++))
+#     #exec ls -trl "$file"
+#     echo "$count - file: $file"
+# done
+
+count=0
 
 # Loop through files in the source directory
 #for file in "$source_dir"/*; do
-for file in $(find "$source_dir/" -name "*.xlsx"); do
+#for file in $(find "$source_dir/" -name "*.xlsx"); do
+for file in $(find -L "$source_dir/" -maxdepth 1 -type f -name "*.xlsx" -exec ls -tr {} + ); do
     # Check if it's a file (not a directory)
     if [ -f "$file" ]; then
         # Increment the counter

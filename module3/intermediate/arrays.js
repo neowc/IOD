@@ -87,3 +87,10 @@ function array_methods_answers(){
 //array_mani();
 array_methods();
 array_methods_answers();
+
+///////////////////////////destructuring///////////////////////////
+const cars = [
+    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+    {name:"BMW", models:["320", "X3", "X5"]},
+    {name:"Fiat", models:["500", "Panda"]}
+];

@@ -1,0 +1,58 @@
+<!-- Animate Multiple Properties: Create an animation for a circle that:
+Starts at the top of the screen.
+Changes color to blue at 50% of the animation duration.
+Ends at the bottom of the screen.
+Runs in a continuous loop.
+Key concepts: @keyframes, animation-name, animation-direction, animation-fill-mode -->
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <title>Animate Multiple Properties</title>
+    <style>
+    .circle {
+        width: 50px;
+        height: 50px;
+        background-color: #f06;
+        border-radius: 50%;  /* circle */
+        /* position: relative; */
+        left : 50%;
+        position: absolute;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        /* animation-direction: alternate; */
+        animation-fill-mode: forwards;
+    }
+    @keyframes move {
+        from {
+            top: 0;
+            background-color: #f06; 
+        }
+        0% {
+        top: 0;
+        background-color: #f06;
+        }
+        50% {
+        background-color: #69f;
+        }
+        100% {
+        top: 100%;
+        background-color: #f06;
+        }
+    }
+    </style>
+</head>
+    <body>
+        <div class="circle"></div>
+    </body>
+</html>
+
+<!-- The animation in the code snippet above moves a circle element from the top to the bottom of the screen over 5 seconds. The circle changes color to blue at the halfway point of the animation. The animation runs in a continuous loop, moving the circle back and forth between the top and bottom of the screen. -->
+<!-- The keyframes rule defines the animation sequence. The move animation starts with the circle at the top of the screen (0% keyframe) and changes the background color to blue at the halfway point (50% keyframe). The animation ends with the circle at the bottom of the screen (100% keyframe). -->
+<!-- The animation-name property specifies the name of the keyframes rule to use for the animation. The animation-duration property sets the duration of the animation to 5 seconds. The animation-iteration-count property is set to infinite to make the animation loop continuously. -->
+<!-- The animation-direction property is set to alternate to make the animation reverse direction each time it completes a cycle. The animation-fill-mode property is set to forwards to make the element retain the computed values set by the last keyframe when the animation ends. -->
+<!-- The circle element is styled with a width and height of 40 pixels, a background color of #f06, and a border-radius of 50% to create a circular shape. The position is set to relative to allow the top property to be used for positioning the element. -->
+<!-- The circle element is placed inside the body of the HTML document. When the document is loaded in a web browser, the circle will move from the top to the bottom of the screen in a continuous loop, changing color at the halfway point of the animation. -->
+<!-- To create a similar animation on your website, you can copy the code snippet above and paste it into your HTML document. You can customize the animation by adjusting the keyframes, animation properties, and element styles to achieve the desired effect. -->
+
