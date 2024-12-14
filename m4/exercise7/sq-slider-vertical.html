@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1"
+        />
+        <title>Bootstrap Square Demo</title>
+        <style>
+            .square {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                left: 50%;
+                /* border-radius: 50%; */
+                position: absolute;
+                animation-duration: 6s;
+                animation-iteration-count: infinite;
+                animation-name: moveDownAndColor;
+            }
+
+            @keyframes moveDownAndColor {
+                from {
+                    top: 0;
+                    background-color: red;
+                }
+                90% {
+                    top: 90%;
+                    background-color: blue;
+                }
+                to {
+                    top: 0;
+                    background-color: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="square"></div>
+    </body>
+</html>

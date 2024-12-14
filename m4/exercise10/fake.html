@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCharts</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="main" style="width: 900px;height:600px;"></div>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Category</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Specify the configuration items and data for the chart
+        let options = {
+            title: { text: 'Fake Store Categories' },
+            xAxis: {
+                data: ['Category 1', 'Category 2', 'Category 3', 'Category 4']
+            },
+            yAxis: {},
+            series: [{
+                name: '# products',
+                type: 'bar',
+                data: [0, 1, 5, 2]
+            }]
+        };
+        //fetch all categories from fakestoreapi.com
+        // let cat = fetch('https://fakestoreapi.com/products/categories')
+        //     .then(res=>res.json())
+        //     .then(json=>console.log(json))
+        //fetch all products from fakestoreapi.com
+
+        // Initialise the echarts instance based on the prepared div
+        let myChart = echarts.init(document.getElementById('main'));
+        fetch('https://fakestoreapi.com/products')
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json)
+                // use this JSON to find and set correct option data for the chart
+                updateOptions(json);
+            })
+            .then(() => {
+                // Display the chart
+                myChart.setOption(options);
+            })
+
+        function updateOptions(products) {
+            let cat = new Map();
+            products.forEach((item) => {
+                let count = cat.get(item.catergory);
+
+                if (count > 0) {
+                    cat.set(item.catergory, ++count);
+                } else {
+                    cat.set(item.catergory, 1);
+                }
+                //cat.set(item.name, item.count);
+            });
+            console.log(cat);
+            //options.xAxis.data = data.map((item) => item.name);
+            //options.series[0].data = data.map((item) => item.count);
+
+            //options.xAxis.data = Array.from(cat.keys());
+            options.xAxis.data = [...cat.keys()];
+            options.series[0].data = [...cat.values()];
+
+        }
+    </script>
+</body>
+
+</html>

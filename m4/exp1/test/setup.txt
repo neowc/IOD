@@ -1,0 +1,6 @@
+--install dependencies
+npm install express cors morgan helmet dotenv
+npm install mongoose bcryptjs validator
+
+-- to run
+npm run start:common

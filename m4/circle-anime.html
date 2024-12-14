@@ -1,0 +1,50 @@
+<!-- Animate Multiple Properties: Create an animation for a circle that:
+Starts at the top of the screen.
+Changes color to blue at 50% of the animation duration.
+Ends at the bottom of the screen.
+Runs in a continuous loop.
+Key concepts: @keyframes, animation-name, animation-direction, animation-fill-mode. -->
+
+<!-- Aaron Lam answers -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1"
+        />
+        <style>
+            .circle {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                left: 50%;
+                border-radius: 50%;
+                position: absolute;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-name: moveDownAndColor;
+            }
+
+            @keyframes moveDownAndColor {
+                from {
+                    top: 0;
+                    background-color: red;
+                }
+                50% {
+                    top: 50%;
+                    background-color: blue;
+                }
+                to {
+                    top: 100%;
+                    background-color: red;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle"></div>
+    </body>
+</html>

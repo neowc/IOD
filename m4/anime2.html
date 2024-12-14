@@ -7,45 +7,50 @@ Key concepts: @keyframes, animation-name, animation-direction, animation-fill-mo
 
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
+
 <head>
     <title>Animate Multiple Properties</title>
     <style>
-    .circle {
-        width: 50px;
-        height: 50px;
-        background-color: #f06;
-        border-radius: 50%;  /* circle */
-        /* position: relative; */
-        left : 50%;
-        position: absolute;
-        animation-name: move;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        /* animation-direction: alternate; */
-        animation-fill-mode: forwards;
-    }
-    @keyframes move {
-        from {
-            top: 0;
-            background-color: #f06; 
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #f06;
+            border-radius: 50%;
+            /* circle */
+            /* position: relative; */
+            left: 50%;
+            position: absolute;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+            animation-fill-mode: forwards;
         }
-        0% {
-        top: 0;
-        background-color: #f06;
+
+        @keyframes move {
+            from {
+                top: 0;
+                background-color: #f06;
+            }
+            0% {
+                top: 0;
+                background-color: #f06;
+            }
+            50% {
+                background-color: #69f;
+            }
+            100% {
+                top: 100%;
+                background-color: #f06;
+            }
         }
-        50% {
-        background-color: #69f;
-        }
-        100% {
-        top: 100%;
-        background-color: #f06;
-        }
-    }
     </style>
 </head>
-    <body>
-        <div class="circle"></div>
-    </body>
+
+<body>
+    <div class="circle"></div>
+</body>
+
 </html>
 
 <!-- The animation in the code snippet above moves a circle element from the top to the bottom of the screen over 5 seconds. The circle changes color to blue at the halfway point of the animation. The animation runs in a continuous loop, moving the circle back and forth between the top and bottom of the screen. -->
@@ -55,4 +60,3 @@ Key concepts: @keyframes, animation-name, animation-direction, animation-fill-mo
 <!-- The circle element is styled with a width and height of 40 pixels, a background color of #f06, and a border-radius of 50% to create a circular shape. The position is set to relative to allow the top property to be used for positioning the element. -->
 <!-- The circle element is placed inside the body of the HTML document. When the document is loaded in a web browser, the circle will move from the top to the bottom of the screen in a continuous loop, changing color at the halfway point of the animation. -->
 <!-- To create a similar animation on your website, you can copy the code snippet above and paste it into your HTML document. You can customize the animation by adjusting the keyframes, animation properties, and element styles to achieve the desired effect. -->
-
