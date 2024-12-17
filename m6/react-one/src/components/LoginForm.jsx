@@ -59,8 +59,6 @@ export default function LoginForm() {
             setSubmitResult('Email must be at least 10 characters long');
         }
     }
-
-
     return (
         <div className="LoginForm componentBox">
             {!hideForm && (

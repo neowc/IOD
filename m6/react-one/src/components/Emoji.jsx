@@ -6,18 +6,18 @@
 import { useState } from "react";
 
 function Emoji() {
-  const [emoji, setEmoji] = useState("😀");
+    const [emoji, setEmoji] = useState("😀");
 
-  function changeEmoji() {
-    setEmoji("😢");
-  }
+    function changeEmoji() {
+        setEmoji("😢");
+    }
 
-  return (
-    <div>
-      <h1>{emoji}</h1>
-      <button onClick={changeEmoji}>Change Emoji</button>
-    </div>
-  );
+    return (
+        <div>
+        <h1>{emoji}</h1>
+        <button onClick={changeEmoji}>Change Emoji</button>
+        </div>
+    );
 }
 
 export default Emoji;
