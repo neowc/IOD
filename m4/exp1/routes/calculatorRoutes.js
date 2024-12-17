@@ -15,7 +15,11 @@ router.get('/add',(req,res)=>{
     let number1 = parseInt(req.query.num1);
     let number2 = parseInt(req.query.num2);
     let sum = number1 + number2;
-
+    if(Number.isNaN(sum)){
+        return res.status(400).json({
+            error: 'The inputs are not correct numbers',
+        });
+    }
     //res.send(`The sum is ${sum}`);  //Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
     res.status(200);
     //res.json({result:sum});
@@ -26,6 +30,11 @@ router.get('/subtract',(req,res)=>{
     let number1 = parseInt(req.query.num1);
     let number2 = parseInt(req.query.num2);
     let subt = number1 - number2;
+    if(Number.isNaN(subt)){
+        return res.status(400).json({
+            error: 'The inputs are not correct numbers',
+        });
+    }
     res.status(200);
     // res.json({result:subt});
     res.json(`${subt}`);
@@ -35,6 +44,11 @@ router.get('/divide',(req,res)=>{
     let number1 = parseInt(req.query.num1);
     let number2 = parseInt(req.query.num2);
     let div = number1 / number2;
+    if(Number.isNaN(div)){
+        return res.status(400).json({
+            error: 'The inputs are not correct numbers',
+        });
+    }
     res.status(200);
     // res.json({result:div});
     res.json(`${div}`);
