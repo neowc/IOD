@@ -13,7 +13,8 @@ const addNumbers = (req, res) => {
     }
     console.log(sum);
     res.status(200);
-    res.json({ result: sum });
+    res.json(`${sum}`);
+    // res.json({ result: sum });
     //res.send(`The sum is ${sum}`);
     //res.send(`${number1 + number2}`);
 };
