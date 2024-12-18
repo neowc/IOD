@@ -9,7 +9,8 @@ const express = require('express');
 
 const testRoutes = require("./routes/testRoutes");
 const calcRoutes = require("./routes/calcRoutes");
-const calculatorRoutes = require("./routes/calculatorRoutes");
+// const calculatorRoutes = require("./routes/calculatorRoutes");
+const calculatorRoutes = require("./routes/calculatorRoute");
 const userRoutes = require("./routes/userRoutes");
 
 const app = express();
@@ -21,7 +22,11 @@ const swaggerDocument = require('./swagger.json');
 app.use(express.json());
 app.use("/", express.static('public'));
 // app.use("/static", express.static('public'));
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+//swaggerUi - http://localhost:3100/api-docs/#/
+app.use('/api-docs',
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerDocument));
 
 app.use("/test", testRoutes);
 app.use("/calc", calcRoutes); //my own

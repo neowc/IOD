@@ -4,8 +4,8 @@ class Logger {
         this.id = id;
     }
 
-    log = (value) => {
-        console.log(`[${this.referrer}:${this.id}] : ${value}`);
+    log = (value, ops) => {
+        console.log(`[${this.referrer}:${this.id}]${ops}: ${value}`);
     };
 }
 
