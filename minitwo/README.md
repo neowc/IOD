@@ -8,9 +8,9 @@
 * Date tracking
 * Completion ticker
 
-To run the application:
-
 ## Installation & Run
+
+To run the application:
 
 Backend:
 
