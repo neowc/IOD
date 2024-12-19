@@ -4,25 +4,27 @@
 ---
 # Key Features
 
-* Easy racking of Dodoof daily items
+* Easy tracking of Todo list of daily items
 * Date tracking
 * Completion ticker
 
 To run the application:
 
-# Backend Setup:
+## Installation & Run
 
-cd backend
-npm init -y
-npm install express cors
-node server.js
+Backend:
 
-# Frontend Setup:
+* cd backend
+* npm init -y
+* npm install express cors
+* node server.js
 
-cd frontend
-npm create vite@latest . -- --template react
-npm install
-npm run dev
+Frontend:
+
+* cd frontend
+* npm create vite@latest . -- --template react
+* npm install
+* npm run dev
 
 ---
 # Thank You!
