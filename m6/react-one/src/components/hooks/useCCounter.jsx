@@ -8,7 +8,7 @@ export function useCCounter(initialValue = 0) {
     // create decrement
     const decrement = () => {setCount(count - 1)};
     // create reset
-    const reset = () => setCount(0);
+    const reset = () => setCount(initialValue);
 
     // function handleChange(e) {
     //     setCount(e.target.value);
