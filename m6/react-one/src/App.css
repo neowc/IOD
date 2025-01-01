@@ -40,3 +40,7 @@
 .read-the-docs {
   color: #888;
 }
+
+/* add into App.css to apply to entire component tree */
+.componentBox { border: 1px solid #aaa; margin: 1em;
+  padding: 1em; text-align: center; background: #efefef; }

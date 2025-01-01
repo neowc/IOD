@@ -1,4 +1,5 @@
-// add to ErrorMessage.jsx
+import PropTypes from 'prop-types';
+
 function ErrorMessage({ error, resetErrorBoundary }) {
     console.error(error);
     // Call resetErrorBoundary() to reset the error boundary and retry the render.
@@ -11,4 +12,10 @@ function ErrorMessage({ error, resetErrorBoundary }) {
         </div>
     );
 }
+
+ErrorMessage.propTypes = {
+    error: PropTypes.object.isRequired,
+    resetErrorBoundary: PropTypes.func.isRequired
+};
+
 export default ErrorMessage;

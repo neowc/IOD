@@ -15,27 +15,27 @@ import PropTypes from 'prop-types';
 function SingleCat({name, latinName, url}) {
     return (
         <div className="SingleCat componentBox">
-            {/* <img className="cat-image" src={url} alt={name} /> */}
+            <img className="cat-image" src={url} alt={name} />
             <h3>{name} (<em>{latinName}</em>)</h3>
         </div>
     );
 }
 
-function BigCats() {
-    return (
-        <div className="big-cats">
-            <h2>Big Cats</h2>
-            <div className="cats-list">
-                {cats.map((cat) => (
-                    <SingleCat
-                    key={cat.id}
-                    {...cat}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-};
+// function BigCats() {
+//     return (
+//         <div className="big-cats">
+//             <h2>Big Cats</h2>
+//             <div className="cats-list">
+//                 {cats.map((cat) => (
+//                     <SingleCat
+//                     key={cat.id}
+//                     {...cat}
+//                     />
+//                 ))}
+//             </div>
+//         </div>
+//     );
+// };
 
 function BigCatsImmutable() {
     const [catList, setCurrentCats] = useState(cats);
