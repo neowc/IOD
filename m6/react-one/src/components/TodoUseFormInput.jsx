@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useFormInput } from "./hooks/useFormInput";
-
+// this is use of custom hook useFormInput()
 export default function SubscribeForm() {
     const [status, setStatus] = useState("");
 
