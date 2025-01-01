@@ -4,9 +4,8 @@ import { useReducer } from "react";
 // takes two arguments: the current state, and the action to be taken
 // action is passed via dispatch, state is stored in component
 const reducer = (state, action) => {
-    switch (
-        action.type // switch statements are common in reducers
-    ) {
+    // switch statements are common in reducers
+    switch ( action.type ) {
         case "increment":
             return state + 1;
         case "decrement":

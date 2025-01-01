@@ -34,7 +34,9 @@ function UseReducerExample() {
             <button onClick={() => dispatch({ type: "decrement" }) }>
                 Decrement
             </button>
-            <button onClick={() => dispatch({ type: "reset" }) }>Reset</button>
+            <button onClick={() => dispatch({ type: "reset" }) }>
+                Reset
+            </button>
         </div>
     );
 }
