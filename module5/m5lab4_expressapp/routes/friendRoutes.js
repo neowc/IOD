@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const friends = require('../models/friends')
 
-
 // TODO - #1: Add support to the 'filter' endpoint for a new query parameter 'letter' which filters friends by starting letter
 
 // TODO - #2: Modify the 'info' route to only return the user-agent, content-type and accept header data
@@ -10,9 +9,6 @@ const friends = require('../models/friends')
 // TODO - #3: Modify the dynamic GET route to return a single friend object matching the dynamic 'id' request parameter
 
 // TODO - #4: Complete the PUT route which will update data for an existing friend
-
-// TODO - #5: Move all logic out into a controller with functions for finding, filtering, info, adding and updating
-
 
 // default endpoint, gets all friends
 router.get('/', (req, res) => {
