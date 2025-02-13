@@ -16,7 +16,7 @@
 2.	Backend (Next.js API Routes):
 * Set up API routes in Next.js to handle server-side logic.
 * Create at least 3 API endpoints (e.g., GET, POST, and PUT/DELETE) to interact with the database.
-* Use a database (e.g. MySQL via Sequelize/Prisma) to persist data.
+* Use a database (e.g. MySQL via Prisma ORM) to persist data.
 3.	Database Integration:
 * Configure a database connection (MySQL).
 * Implement CRUD operations to interact with the database.
@@ -31,7 +31,6 @@ To run the application:
 
 * cd minithree
 * npm install @prisma/client prisma
-* npm install @prisma/client
 * npx prisma init
 * npm install -D tailwindcss@latest postcss autoprefixer
 * npm run dev
@@ -39,9 +38,9 @@ To run the application:
 ---
 # Thank You!
 
-This is using template with a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is using template with a minimal setup to get Next.js working with local hosted MySQL.
 
-Currently, two official plugins are used:
+Currently, two official libraries are used:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@Prisma ORM](https://github.com/prisma/prisma/README.md) uses [Prisma Client](https://www.prisma.io/docs/orm/prisma-client/)
+- [@Next.js](https://nextjs.org/docs/) is a React framework for building full-stack web applications
