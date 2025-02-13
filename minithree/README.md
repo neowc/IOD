@@ -29,18 +29,11 @@
 
 To run the application:
 
-Backend:
-
-* cd backend
-* npm init -y
-* npm install express cors
-* node server.js
-
-Frontend:
-
-* cd frontend
-* npm create vite@latest . -- --template react
-* npm install
+* cd minithree
+* npm install @prisma/client prisma
+* npm install @prisma/client
+* npx prisma init
+* npm install -D tailwindcss@latest postcss autoprefixer
 * npm run dev
 
 ---
