@@ -30,6 +30,7 @@
 To configure your local MySQL instance for use by your application:
 
 * Create a new table inside your MySQL instance and define below entry in your "<parent_folder>/**.env**" file:
+
 DATABASE_URL="mysql://<your_username>:<password>@localhost:3306/<your_DB_name>"
 
 To run the application:
