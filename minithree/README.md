@@ -22,7 +22,7 @@
 * Implement CRUD operations to interact with the database.
 * The database is hosted locally.
 4.	Integration:
-* Use Next/server to send requests to your Next.js API routes.
+* Use native Fetch to Next/server to send requests to your Next.js API routes.
 
 
 ## Installation & Run
