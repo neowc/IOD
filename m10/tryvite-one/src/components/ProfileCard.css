@@ -1,0 +1,10 @@
+
+/* Style the ProfileCard using both inline styles and an external CSS file */
+.profile-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    display: inline-block;
+}

@@ -1,0 +1,66 @@
+docker build -t privateoc/iod:latest -t privateoc/iod:1.0 .
+[+] Building 2.1s (10/11)
+ => [internal] load build definition from Dockerfile                                                                                                                                                       0.0s 
+ => => transferring dockerfile: 224B                                                                                                                                                                       0.0s 
+ => [internal] load .dockerignore                                                                                                                                                                          0.0s 
+ => => transferring context: 35B                                                                                                                                                                           0.0s 
+ => [internal] load metadata for docker.io/library/node:19-alpine                                                                                                                                          0.9s 
+ => [internal] load build context                                                                                                                                                                          0.0s 
+ => => transferring context: 2.54kB                                                                                                                                                                        0.0s 
+ => [1/7] FROM docker.io/library/node:19-alpine@sha256:8ec543d4795e2e85af924a24f8acb039792ae9fe8a42ad5b4bf4c277ab34b62e                                                                                    0.0s 
+ => CACHED [2/7] WORKDIR /app                                                                                                                                                                              0.0s 
+ => CACHED [3/7] COPY package.json ./                                                                                                                                                                      0.0s 
+ => CACHED [4/7] COPY package-lock.json ./                                                                                                                                                                 0.0s 
+ => CACHED [5/7] COPY vite.config.js ./                                                                                                                                                                    0.0s 
+ => ERROR [6/7] RUN npm ci                                                                                                                                                                                 1.1s 
+------
+ > [6/7] RUN npm ci:
+#10 1.097 npm notice
+#10 1.097 npm notice New major version of npm available! 9.6.3 -> 11.1.0
+#10 1.097 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v11.1.0>
+#10 1.097 npm notice Run `npm install -g npm@11.1.0` to update!
+#10 1.097 npm notice
+#10 1.098 npm ERR! code ERESOLVE
+#10 1.101 npm ERR! ERESOLVE could not resolve
+#10 1.101 npm ERR!
+#10 1.101 npm ERR! While resolving: react-boundary@1.0.0
+#10 1.101 npm ERR! Found: react@18.3.1
+#10 1.101 npm ERR! node_modules/react
+#10 1.102 npm ERR!   peer react@"^18.3.1" from react-dom@18.3.1
+#10 1.102 npm ERR!   node_modules/react-dom
+#10 1.102 npm ERR!     peerOptional react-dom@">=18" from react-router@7.0.1
+#10 1.102 npm ERR!     node_modules/react-router
+#10 1.103 npm ERR!       react-router@"7.0.1" from react-router-dom@7.0.1
+#10 1.103 npm ERR!       node_modules/react-router-dom
+#10 1.103 npm ERR!         react-router-dom@"^7.0.1" from the root project
+#10 1.103 npm ERR!     peer react-dom@">=18" from react-router-dom@7.0.1
+#10 1.103 npm ERR!     node_modules/react-router-dom
+#10 1.103 npm ERR!       react-router-dom@"^7.0.1" from the root project
+#10 1.104 npm ERR!     1 more (the root project)
+#10 1.104 npm ERR!   peer react@">=16.13.1" from react-error-boundary@4.1.2
+#10 1.104 npm ERR!   node_modules/react-error-boundary
+#10 1.104 npm ERR!     dev react-error-boundary@"^4.1.2" from the root project
+#10 1.104 npm ERR!   3 more (react-router, react-router-dom, the root project)
+#10 1.105 npm ERR!
+#10 1.105 npm ERR! Could not resolve dependency:
+#10 1.105 npm ERR! peer react@"^16.8.0" from react-boundary@1.0.0
+#10 1.105 npm ERR! node_modules/react-boundary
+#10 1.105 npm ERR!   dev react-boundary@"^1.0.0" from the root project
+#10 1.106 npm ERR!
+#10 1.106 npm ERR! Conflicting peer dependency: react@16.14.0
+#10 1.106 npm ERR! node_modules/react
+#10 1.106 npm ERR!   peer react@"^16.8.0" from react-boundary@1.0.0
+#10 1.107 npm ERR!   node_modules/react-boundary
+#10 1.107 npm ERR!     dev react-boundary@"^1.0.0" from the root project
+#10 1.107 npm ERR!
+#10 1.107 npm ERR! Fix the upstream dependency conflict, or retry
+#10 1.107 npm ERR! this command with --force or --legacy-peer-deps
+#10 1.107 npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+#10 1.107 npm ERR!
+#10 1.108 npm ERR!
+#10 1.108 npm ERR! For a full report see:
+#10 1.108 npm ERR! /root/.npm/_logs/2025-02-18T17_46_25_180Z-eresolve-report.txt
+#10 1.109
+#10 1.110 npm ERR! A complete log of this run can be found in: /root/.npm/_logs/2025-02-18T17_46_25_180Z-debug-0.log
+------
+executor failed running [/bin/sh -c npm ci]: exit code: 1
