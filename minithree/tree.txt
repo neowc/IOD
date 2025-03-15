@@ -1,0 +1,56 @@
+neowc@DESKTOP-0UM4354 MINGW64 /c/Temp/IOD/IOD/minithree (main)
+$ cmd
+Microsoft Windows [Version 10.0.19042.746]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\Temp\IOD\IOD\minithree>ls
+ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+
+C:\Temp\IOD\IOD\minithree>tree /f /a > tree.txt
+tree /f /a > tree.txt
+
+
+
+Folder PATH listing for volume OS
+Volume serial number is 00FE-B2DF
+C:.
+|   .env
+|   .gitignore
+|   jsconfig.json
+|   next.config.mjs
+|   package-lock.json
+|   package.json
+|   postcss.config.mjs
+|   README.md
+|   tailwind.config.js
+|   
++---prisma
+|       schema.prisma
+|       
+|       
+\---src
+    +---app
+    |   |   favicon.ico
+    |   |   globals.css
+    |   |   layout.js
+    |   |   page.js
+    |   |   page.module.css
+    |   |   
+    |   \---api
+    |       \---todos
+    |           |   route.js
+    |           |   
+    |           \---[id]
+    |                   route.js
+    |                   
+    +---components
+    |       TodoForm.jsx
+    |       TodoItem.jsx
+    |       TodoList.jsx
+    |       
+    \---lib
+            prisma.js
+            
