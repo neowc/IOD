@@ -60,7 +60,12 @@ export async function POST(request) {
             activity,
             dueDate: dueDate ? new Date(dueDate) : null,
             priority: priority || 'MEDIUM',
-            categoryId: categoryId ? parseInt(categoryId) : null,
+            // category: category ? parseInt(category) : null,
+            category: {  // Use category relation with connect
+                connect: {
+                    id: categoryId ? parseInt(categoryId) : null
+                }
+            },
             user: {
             connect: {
                 id: session.user.id,
